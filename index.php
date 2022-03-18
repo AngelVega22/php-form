@@ -1,7 +1,9 @@
 <?php
 $title ='Inicio';
 require_once 'includes/header.php';
-require_once 'db/conn.php'
+require_once 'db/conn.php';
+
+$results =  $leadController -> getOcupaciones();
 ?>
 
 <h1 class="text-center">Registro para curso</h1>
@@ -15,18 +17,18 @@ require_once 'db/conn.php'
         <input required type="text" class="form-control" id="lastname" name="lastname">
     </div>
     <div class="form-group">
-        <label for="dob">Date Of Birth</label>
+        <label for="dob">Fecha de nacimiento</label>
         <input type="text" class="form-control" id="dob" name="dob">
     </div>
     <div class="form-group">
         <label for="ocupacion">¿A que te dedicas?</label>
         <select class="form-control" id="ocupacion" name="ocupacion">
-            <option value="1">Estudiante</option>
-            <option>Profesional tecnico</option>
-            <option>Profesional</option>
-            <option>Profesor</option>
+            <?php while($r = $results-> fetch(PDO::FETCH_ASSOC)) {?>
 
-            <option>Otro</option>
+            <option value="<?php  echo $r['ocupacion_id'] ?>"> <?php  echo $r['name']  ?> </option>
+
+            <?php }?>
+
 
         </select>
     </div>
@@ -47,7 +49,6 @@ require_once 'db/conn.php'
         <small id="avatar" class="form-text text-danger">File Upload is Optional</small>
 
     </div>
-
 
     <button type="submit" name="submit" class="btn btn-primary btn-block w-100 mt-3">Submit</button>
 </form>

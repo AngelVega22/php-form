@@ -1,5 +1,7 @@
 <div id="footer">
-    <p class="text-center"> <?php echo 'Copyright ' . date('y') ?></p>
+    <div style="height:50vh"></div>
+    <p class="text-end"> <?php echo 'Desarrollado por Angel Vega ' . '&nbsp&nbsp<small> © <small>'. date('y') ?>
+    </p>
 </div>
 </main>
 <!-- Optional JavaScript; choose one of the two! -->
@@ -21,7 +23,8 @@ $(function() {
     $("#dob").datepicker({
         changeMonth: true,
         changeYear: true,
-        yearRange: "-100:+0"
+        yearRange: "-100:+0",
+        dateFormat: "dd-mm-yy"
     });
 });
 </script>

@@ -5,6 +5,7 @@
        function __construct($conn){
            $this->db = $conn;
        }
+//========================Insertar=======================
 
        public function insert($fname, $lname,$dob, $email,$contact, $ocupacion){
            try {
@@ -26,6 +27,24 @@
                 return false;
         }
            
+       }
+
+//========================Listar=======================
+    
+       
+       public function getLeads(){
+           $sql = "SELECT * FROM `lead` l INNER JOIN ocupaciones o ON l.ocupacion_id = o.ocupacion_id" ;
+           $result = $this->db-> query($sql);
+           return $result;
+       }
+
+
+//========================Listar ocupaciones=======================
+       
+       public function getOcupaciones(){
+           $sql = "SELECT * FROM `ocupaciones`";
+           $result = $this->db-> query($sql);
+           return $result;
        }
     }
 ?>
