@@ -13,9 +13,12 @@ if (isset($_POST['submit'])) {
 
    $isSuccess = $leadController ->insert($fname, $lname,$dob,$email,$contact,$ocupacion);
    if ($isSuccess) {
-       echo '<h1> registered</h1>';
+    //    echo '<h1> registered</h1>';
+    include 'includes/successmessage.php';
    } else {
-    echo '<h1>not registered</h1>';
+    // echo '<h1>not registered</h1>';
+    include 'includes/errormessage.php';
+
 }
    
 }

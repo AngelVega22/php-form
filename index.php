@@ -5,7 +5,6 @@ require_once 'db/conn.php';
 
 $results =  $leadController -> getOcupaciones();
 ?>
-
 <h1 class="text-center">Registro para curso</h1>
 <form method="POST" action="success.php" enctype="multipart/form-data" class="p-5 ">
     <div class="form-group">

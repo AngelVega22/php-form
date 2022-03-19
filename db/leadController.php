@@ -33,18 +33,28 @@
     
        
        public function getLeads(){
+           try{
            $sql = "SELECT * FROM `lead` l INNER JOIN ocupaciones o ON l.ocupacion_id = o.ocupacion_id" ;
            $result = $this->db-> query($sql);
            return $result;
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+            return false;
+    }
        }
 
 
 //========================Listar ocupaciones=======================
        
        public function getOcupaciones(){
+           try{
            $sql = "SELECT * FROM `ocupaciones`";
            $result = $this->db-> query($sql);
            return $result;
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+            return false;
+    }
        }
     }
 ?>
