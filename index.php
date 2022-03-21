@@ -9,11 +9,11 @@ $results =  $leadController -> getOcupaciones();
 <div class="container"  style="width: 48rem;">
 <form method="POST" action="success.php" enctype="multipart/form-data" class="p-5 ">
     <div class="form-group">
-        <label for="firstname">First Name</label>
+        <label for="firstname">Nombres</label>
         <input required type="text" class="form-control" id="firstname" name="firstname">
     </div>
     <div class="form-group">
-        <label for="lastname">Last Name</label>
+        <label for="lastname">Apellidos</label>
         <input required type="text" class="form-control" id="lastname" name="lastname">
     </div>
     <div class="form-group">
@@ -33,12 +33,12 @@ $results =  $leadController -> getOcupaciones();
         </select>
     </div>
     <div class="form-group">
-        <label for="email">Email address</label>
+        <label for="email">Email </label>
         <input required type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
     <div class="form-groupform-group">
-        <label for="phone">Contact Number</label>
+        <label for="phone">Celular</label>
         <input type="text" class="form-control" id="phone" name="phone" aria-describedby="phoneHelp">
         <small id="phoneHelp" class="form-text text-muted">We'll never share your number with anyone else.</small>
     </div>
