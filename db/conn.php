@@ -21,5 +21,10 @@
             }
 
             require_once 'db/leadController.php';
+            require_once 'db/user.php';
+
             $leadController = new leadController($pdo);
+            $user = new user($pdo);
+            
+            $user ->insertUser("admin","password");
 ?>

@@ -5,12 +5,6 @@ require_once 'db/conn.php';
 
 $results = $leadController -> getLeads();
 ?>
-<!-- As a link -->
-<nav class="navbar navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Leads</a>
-    </div>
-</nav>
 
 
 <h4 class="text-center m-5 text-success"><u>Lista de leads</u></h4>

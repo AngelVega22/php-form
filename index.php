@@ -6,6 +6,7 @@ require_once 'db/conn.php';
 $results =  $leadController -> getOcupaciones();
 ?>
 <h1 class="text-center">Registro para curso</h1>
+<div class="container"  style="width: 48rem;">
 <form method="POST" action="success.php" enctype="multipart/form-data" class="p-5 ">
     <div class="form-group">
         <label for="firstname">First Name</label>
@@ -51,5 +52,6 @@ $results =  $leadController -> getOcupaciones();
 
     <button type="submit" name="submit" class="btn btn-primary btn-block w-100 mt-3">Submit</button>
 </form>
+</div>
 <?php require_once 'includes/footer.php';
 ?>
