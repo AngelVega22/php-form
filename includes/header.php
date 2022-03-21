@@ -25,47 +25,29 @@ include_once 'includes/session.php'?>
     <main >
           <!-- As a link -->
 <nav class="navbar navbar-dark bg-dark ">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="leads.php">Leads</a>
-        <a class="navbar-brand" href="index.php">Form</a>
+    <div class="container">
+        <a class="navbar-brand" href="leads.php">Ver Leads</a>
+        <a class="navbar-brand" href="index.php">Formulario</a>
 
 
-        <div class="navbar-nav mr-auto">
+        <div class="nav">
 
         <?php
-            if(!isset($_SESSION['id'])){
+            if(!isset($_SESSION['username'])){
 
             
         ?>
                 <a class="nav-item nav-link" href="login.php">Login</a>
 
         <?php } else{?>
-            <span>Hello <?php echo $_SESSION['username'] ?>!</span>
-            <a class="nav-item nav-link" href="logout.php">Logout</a>
+     
 
+            <a class="navbar-brand" href="#"><span>Bienvenido <?php echo $_SESSION['username'] ?>!</span></a>
+            <a class="nav-item nav-link " href="logout.php">Logout</a>
+           
         <?php } ?>
         </div>
+        <!-- <a class="nav-item nav-link" href="logout.php">Logout</a> -->
+
     </div>
 </nav>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav mr-auto">
-          <a class="nav-item nav-link" href="leads.php">Ver leads</a>
-        </div>
-        <div class="navbar-nav ml-auto">
-          <?php 
-              if(!isset($_SESSION['userid'])){
-          ?>
-            <a class="nav-item nav-link" href="login.php">Login <span class="sr-only"></span></a>
-          <?php } else { ?>
-            <a class="nav-item nav-link" href="#"><span>Hello <?php echo $_SESSION['username'] ?>! </span> <span class="sr-only"></span></a>
-            <a class="nav-item nav-link" href="logout.php">Logout <span class="sr-only"></span></a>
-          <?php } ?>
-          <a class="nav-item nav-link" href="logout.php">Logout <span class="sr-only"></span></a>
-
-        </div>
-      </div>
-    </nav>

@@ -5,7 +5,7 @@ require_once 'db/conn.php';
 
 $results =  $leadController -> getOcupaciones();
 ?>
-<h1 class="text-center">Registro para curso</h1>
+<h1 class="text-center">Agregar lead</h1>
 <div class="container"  style="width: 48rem;">
 <form method="POST" action="success.php" enctype="multipart/form-data" class="p-5 ">
     <div class="form-group">
@@ -43,12 +43,12 @@ $results =  $leadController -> getOcupaciones();
         <small id="phoneHelp" class="form-text text-muted">We'll never share your number with anyone else.</small>
     </div>
     <br />
-    <div class="custom-file">
+    <!-- <div class="custom-file">
         <input type="file" accept="image/*" class="custom-file-input" id="avatar" name="avatar">
         <label class="custom-file-label" for="avatar">Choose File</label>
         <small id="avatar" class="form-text text-danger">File Upload is Optional</small>
 
-    </div>
+    </div> -->
 
     <button type="submit" name="submit" class="btn btn-primary btn-block w-100 mt-3">Submit</button>
 </form>

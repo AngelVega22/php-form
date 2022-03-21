@@ -26,5 +26,5 @@
             $leadController = new leadController($pdo);
             $user = new user($pdo);
             
-            $user ->insertUser("admin","password");
+            // $user ->insertUser("admin","password");
 ?>
