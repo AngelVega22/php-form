@@ -26,10 +26,12 @@ include_once 'includes/session.php'?>
           <!-- As a link -->
 <nav class="navbar navbar-dark bg-dark ">
     <div class="container">
-        <a class="navbar-brand" href="leads.php">Ver Leads</a>
-        <a class="navbar-brand" href="index.php">Formulario</a>
+    <div class="nav">
 
+        <a class="navbar-brand" href="leads.php"> Leads</a>
+        <a class="navbar-brand" href="index.php">Formulario </a>
 
+</div>
         <div class="nav">
 
         <?php
